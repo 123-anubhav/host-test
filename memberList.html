@@ -1,0 +1,376 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>home page </title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- datatable testing 
+    <script src="js/jquery.js"></script>
+    <script src="media/js/jquery.dataTables.min.js"></script>
+    <link href="media/css/jquery.dataTables.min.css" rel="stylesheet">
+    <script>
+        $(document).ready(function () {
+            $("#myTable").dataTable();
+        });
+    </script>
+-->
+
+    <!--selfie js file code -->
+    <script src="webcam.js"></script>
+
+    <!--left-right menu-content code styles -->
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td,
+    th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #706666;
+    }
+</style>
+
+<!-- for searhc css code -->
+<style>
+    #myInput {
+        background-image: url('/css/searchicon.png');
+        /* Add a search icon to input */
+        background-position: 10px 12px;
+        /* Position the search icon */
+        background-repeat: no-repeat;
+        /* Do not repeat the icon image */
+        width: 100%;
+        /* Full-width */
+        font-size: 16px;
+        /* Increase font-size */
+        padding: 12px 20px 12px 40px;
+        /* Add some padding */
+        border: 1px solid #ddd;
+        /* Add a grey border */
+        margin-bottom: 12px;
+        /* Add some space below the input */
+    }
+
+    #myUL {
+        /* Remove default list styling */
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    #myUL li a {
+        border: 1px solid #ddd;
+        /* Add a border to all links */
+        margin-top: -1px;
+        /* Prevent double borders */
+        background-color: #f6f6f6;
+        /* Grey background color */
+        padding: 12px;
+        /* Add some padding */
+        text-decoration: none;
+        /* Remove default text underline */
+        font-size: 18px;
+        /* Increase the font-size */
+        color: black;
+        /* Add a black text color */
+        display: block;
+        /* Make it into a block element to fill the whole list */
+    }
+
+    #myUL li a:hover:not(.header) {
+        background-color: #eee;
+        /* Add a hover effect to all links, except for headers */
+    }
+</style>
+<script>
+    function myFunction() {
+        // Declare variables
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById('myInput');
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myUL");
+        li = ul.getElementsByTagName('li');
+
+        // Loop through all list items, and hide those who don't match the search query
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
+</script>
+
+<body>
+
+    <div id="page">
+        <div class="container" id="content">
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+
+            <ul id="myUL">
+
+                <li><a href="#">Adele</a></li>
+                <li><a href="#">Agnes</a></li>
+
+                <label for="cars">select filter by given field :</label>
+
+                <select id="cars">
+                    <option value="NAME">NAME</option>
+                    <option value="ID">ID</option>
+                    <option value="MOBILE">MOBILE</option>
+                    <option value="CITY">CITY</option>
+                    <option value="BLOCK">BLOCK</option>
+                    <option value="WARDNAME">WARDNAME</option>
+                    <option value="MOHALLA">MOHALLA</option>
+                </select>
+
+                <table id="myUL" class="table table-borderless table-dark">
+                    <tr>
+                        <th>ID NO</th>
+                        <th>NAME</th>
+                        <th>C/O OR F/O</th>
+                        <th>ADDRESS</th>
+                        <th>WARD</th>
+                        <th>VILLAGE</th>
+                        <th>BLOCK</th>
+                        <th>DISTRICT</th>
+                        <th>D.O.J.</th>
+                        <th>VIEW DONATION</th>
+                    </tr>
+                    <tr>
+                        <td>Alfreds Futterkiste</td>
+                        <td>Maria Anders</td>
+                        <td>Germany</td>
+                        <td>Maria Anders</td>
+                        <td>Germany</td>
+                        <td>Alfreds Futterkiste</td>
+                        <td>Maria Anders</td>
+                        <td>Germany</td>
+                        <td>anubhav</td>
+                        <td><a href="viewdonationlist.html">viewdonationlist</td>
+                    </tr>
+                    <tr>
+                        <td>Alfreds Futterkiste</td>
+                        <td>Maria Anders</td>
+                        <td>Germany</td>
+                        <td>Maria Anders</td>
+                        <td>Germany</td>
+                        <td>Alfreds Futterkiste</td>
+                        <td>Maria Anders</td>
+                        <td>Germany</td>
+                        <td>Maria Anders</td>
+                        <td><a href="viewdonationlist.html">viewdonationlist</td>
+                    </tr>
+                    <tr>
+                        <td>Alfreds Futterkiste</td>
+                        <td>Maria Anders</td>
+                        <td>Germany</td>
+                        <td>Maria Anders</td>
+                        <td>Germany</td>
+                        <td>Alfreds Futterkiste</td>
+                        <td>Maria Anders</td>
+                        <td>Germany</td>
+                        <td>Maria Anders</td>
+                        <td><a href="viewdonationlist.html">viewdonationlist</td>
+                    </tr>
+                    <tr>
+                        <td>Alfreds Futterkiste</td>
+                        <td>Maria Anders</td>
+                        <td></td>
+                        <td>Maria Anders</td>
+                        <td>Germany</td>
+                        <td>Alfreds Futterkiste</td>
+                        <td>Maria Anders</td>
+                        <td></td>
+                        <td>Maria Anders</td>
+                        <td><a href="viewdonationlist.html">viewdonationlist</td>
+                    </tr>
+                    <tr>
+                        <td>Alfreds Futterkiste</td>
+                        <td>Maria Anders</td>
+                        <td>Germany</td>
+                        <td>Maria Anders</td>
+                        <td>Germany</td>
+                        <td>Alfreds Futterkiste</td>
+                        <td>Maria Anders</td>
+                        <td>Germany</td>
+                        <td>Maria Anders</td>
+                        <td><a href="viewdonationlist.html">viewdonationlist</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Maria Anders</td>
+                        <td></td>
+                        <td>Maria Anders</td>
+                        <td>Germany</td>
+                        <td>Alfreds Futterkiste</td>
+                        <td>Maria Anders</td>
+                        <td></td>
+                        <td>Maria Anders</td>
+                        <td><a href="viewdonationlist.html">viewdonationlist</td>
+                    </tr>
+                </table>
+
+        </div>
+
+
+        <div class="container" id="menu" style="background-color:black;">
+            <nav class="">
+                <div class="container">
+                    <ul class="navbar">
+                        <li class="nav-item">
+                            <a class="nav-link" href="home.html">home</a>
+                        </li><br>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">about</a>
+                        </li><br>
+                        <li class="nav-item">
+                            <a class="nav-link" href="register.html">register</a>
+                        </li><br>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">login</a>
+                        </li><br>
+                        <li class="nav-item">
+                            <a class="nav-link" href="memberList.html">member List</a>
+                        </li><br>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sahyoglist.html">sahyog list</a>
+                        </li><br>
+                        <li class="nav-item">
+                            <a class="nav-link" href="vyasthasulk.html">vyastha sulk</a>
+                        </li><br>
+                        <li class="nav-item">
+                            <a class="nav-link" href="niyamawali.html">niyamawali</a>
+                        </li><br>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">blog</a>
+                        </li><br>
+                        <li class="nav-item">
+                            <a class="nav-link" href="viewdonationlist.html">view donation list</a>
+                        </li><br>
+                        <li class="nav-item">
+                            <a class="nav-link" href="media.html">media</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="navbar.html">navbar</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div id="content">
+            <div class="container">
+
+                <table id="myTable" class="table table-borderless table-dark">
+                    <tr>
+                        <th>ID NO</th>
+                        <th>NAME</th>
+                        <th>C/O OR F/O</th>
+                        <th>ADDRESS</th>
+                        <th>WARD</th>
+                        <th>VILLAGE</th>
+                        <th>BLOCK</th>
+                        <th>DISTRICT</th>
+                        <th>D.O.J.</th>
+                        <th>VIEW DONATION</th>
+                    </tr>
+                    <tr>
+                        <td>Alfreds Futterkiste</td>
+                        <td>Maria Anders</td>
+                        <td>Germany</td>
+                        <td>Maria Anders</td>
+                        <td>Germany</td>
+                        <td>Alfreds Futterkiste</td>
+                        <td>Maria Anders</td>
+                        <td>Germany</td>
+                        <td>Maria Anders</td>
+                        <td><a href="viewdonationlist.html">viewdonationlist</td>
+                    </tr>
+                    <tr>
+                        <td>Alfreds Futterkiste</td>
+                        <td>Maria Anders</td>
+                        <td>Germany</td>
+                        <td>Maria Anders</td>
+                        <td>Germany</td>
+                        <td>Alfreds Futterkiste</td>
+                        <td>Maria Anders</td>
+                        <td>Germany</td>
+                        <td>Maria Anders</td>
+                        <td><a href="viewdonationlist.html">viewdonationlist</td>
+                    </tr>
+                    <tr>
+                        <td>Alfreds Futterkiste</td>
+                        <td>Maria Anders</td>
+                        <td>Germany</td>
+                        <td>Maria Anders</td>
+                        <td>Germany</td>
+                        <td>Alfreds Futterkiste</td>
+                        <td>Maria Anders</td>
+                        <td>Germany</td>
+                        <td>Maria Anders</td>
+                        <td><a href="viewdonationlist.html">viewdonationlist</td>
+                    </tr>
+                    <tr>
+                        <td>Alfreds Futterkiste</td>
+                        <td>Maria Anders</td>
+                        <td></td>
+                        <td>Maria Anders</td>
+                        <td>Germany</td>
+                        <td>Alfreds Futterkiste</td>
+                        <td>Maria Anders</td>
+                        <td></td>
+                        <td>Maria Anders</td>
+                        <td><a href="viewdonationlist.html">viewdonationlist</td>
+                    </tr>
+                    <tr>
+                        <td>Alfreds Futterkiste</td>
+                        <td>Maria Anders</td>
+                        <td>Germany</td>
+                        <td>Maria Anders</td>
+                        <td>Germany</td>
+                        <td>Alfreds Futterkiste</td>
+                        <td>Maria Anders</td>
+                        <td>Germany</td>
+                        <td>Maria Anders</td>
+                        <td><a href="viewdonationlist.html">viewdonationlist</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Maria Anders</td>
+                        <td></td>
+                        <td>Maria Anders</td>
+                        <td>Germany</td>
+                        <td>Alfreds Futterkiste</td>
+                        <td>Maria Anders</td>
+                        <td></td>
+                        <td>anubhav</td>
+                        <td><a href="viewdonationlist.html">viewdonationlist</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

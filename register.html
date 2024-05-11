@@ -1,0 +1,257 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>home page </title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!--selfie js file code -->
+    <script src="webcam.js"></script>
+    <!--left-right menu-content code styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="page">
+        <div id="content">
+            <div class="container">
+                <form action="home.html" method="POST">
+                    <label for="name">enter name :</label>
+                    <input type="text" id="name" name="name" placeholder="enter name..."><br>
+
+                    <label for="fathername">enter father/husband/wife name :</label>
+                    <input type="text" id="fathername" name="fathername" placeholder="fathername..."><br>
+
+                    <label for="date-of-birth">date-of-birth [ validation *age-limit->{21-65 allowed}]:</label>
+                    <input type="date" id="birthday" name="birthday"><br>
+
+                    <label for="gender">gender</label>
+                    <input type="radio" id="male" name="male" value="male">
+                      <label for="male">male</label>&nbsp;&nbsp;
+                      <input type="radio" id="female" name="female" value="female">
+                      <label for="female">female</label><br>
+
+                    <label for="bloodgroup">your blood group</label>
+                    <select name="bloodgroup" placeholder="blood group...">
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                    </select><br>
+
+                    <label for="emailid">enter emailid :</label>
+                    <input type="text" id="emailid" name="emailid" placeholder="emailid..."><br>
+
+                    <label for="name">varanashi ke nivas ka pata</label><br>
+                    <label for="flatNumber">(a) flat number :</label>
+                    <input type="text" id="flatNumber" name="flatNumber" placeholder="flatNumber..."><br>
+
+                    <label for="gali">(b) enter gali :</label>
+                    <input type="text" id="gali" name="gali" placeholder="gali..."><br>
+
+                    <label for="mohalla">(c) enter mohalla/villege :</label>
+                    <input type="text" id="mohalla" name="mohalla" placeholder="mohalla..."><br>
+
+                    <label for="nivas">(d) nivas ka area : </label>
+                    <select name="nivas" id="nivas">
+                        <option value="city">city</option>
+                        <option value="villege">villege</option>
+                    </select>
+
+                    <b>if villege then this dropdown</b>
+                    <label for="block">block : </label>
+                    <select name="block" id="block">
+                        <option value="city">block A</option>
+                        <option value="villege">block B</option>
+                    </select>
+
+                    <b>else for city then this dropdown</b>
+                    <label for="ward">ward : </label>
+                    <select name="ward" id="ward">
+                        <option value="ward">ward A</option>
+                        <option value="ward">ward B</option>
+                    </select>
+                    <br>
+
+                    <label for="nivas">(e) thana : </label>
+                    <input type="text" id="thana" name="thana" placeholder="thana..."><br>
+
+                    <label for="name">(f) land mark ( near famous place ) :</label>
+                    <input type="text" id="name" name="name" placeholder="john abraham"><br>
+
+                    <label for="name">(g) janpad :</label>
+                    <input type="text" id="janpad" name="janpad" value="varanashi" placeholder="janpad..."><br>
+
+                    <label for="name">permanent address :</label>
+                    <label for="flatNumber">(a) flat number :</label>
+                    <input type="text" id="flatNumber" name="flatNumber" placeholder="flatNumber..."><br>
+
+                    <label for="gali">(b) enter gali :</label>
+                    <input type="text" id="gali" name="gali" placeholder="gali..."><br>
+
+                    <label for="mohalla">(c) enter mohalla/villege :</label>
+                    <input type="text" id="mohalla" name="mohalla" placeholder="mohalla..."><br>
+
+                    <label for="nivas">(d) nivas ka area : </label>
+                    <select name="nivas" id="nivas">
+                        <option value="city">city</option>
+                        <option value="villege">villege</option>
+                    </select>
+
+                    <b>if villege then this dropdown</b>
+                    <label for="block">block : </label>
+                    <select name="block" id="block">
+                        <option value="city">block A</option>
+                        <option value="villege">block B</option>
+                    </select>
+
+                    <b>else for city then this dropdown</b>
+                    <label for="ward">ward : </label>
+                    <select name="ward" id="ward">
+                        <option value="ward">ward A</option>
+                        <option value="ward">ward B</option>
+                    </select>
+
+                    <label for="nivas">(e) thana : </label>
+                    <input type="text" id="thana" name="thana" placeholder="thana..."><br>
+
+                    <label for="name">(f) land mark ( near famous place ) :</label>
+                    <input type="text" id="name" name="name" placeholder="john abraham"><br>
+
+                    <label for="name">(g) janpad :</label>
+                    <input type="text" id="janpad" name="janpad" value="varanashi" placeholder="janpad..."><br>
+
+
+                    <label for="name">your job/kya kam krte hain likhe :</label>
+                    <input type="text" id="jobname" name="jobname" placeholder="engineer..."><br>
+
+                    <label for="name">job address yes/no :</label>
+                    <input type="radio" id="yes" name="yes" value="yes">
+                      <label for="yes">yes</label><br>
+                      <input type="radio" id="no" name="no" value="no">
+                      <label for="no">no</label><br>
+
+                    <b>if yes then full-addree fill kre</b>
+                    <input type="text" name="jobaddress" placeholder="29/03p,chak daundi,prayagraj,211078,U.P.">
+
+                    <br>
+
+                    <label for="name">marital status :</label>
+                    <select name="maritalstatus">
+                        <option value="vivahit">vivahit</option>
+                        <option value="a-vivahit">a-vivahit</option>
+                        <option value="divorcy">divorcy</option>
+                        <option value="vidhoor">vidhoor</option>
+                    </select>
+                    <b> so much drop down based on condition follow docs page no. : 3</b>
+                    <select name="maritalstatus">
+                        <option value="normal">normal hai</option>
+                        <option value="vicharadhin">vicharadhin hai</option>
+                    </select>
+
+                    <label for="name">enter mobile number (self) :</label>
+                    <input type="text" id="mobnumber" name="mobnumber" placeholder="mobnumber..."><br>
+
+                    <label for="name">enter whastsapp mobile number ( self - is se login hoga) :</label>
+                    <input type="text" id="whatsappmobnumber" name="whatsappmobnumber"
+                        placeholder="whatsappmobnumber..."><br>
+
+                    <label for="password">enter password :</label>
+                    <input type="password" id="password" name="password" placeholder="password.."><br>
+
+                    <label for="cpassword">confirm password :</label>
+                    <input type="password" id="cpassword" name="cpassword" placeholder="cpassword...."><br>
+
+                    <!-- take photo code -->
+                    =========================================
+
+                    <label for="name">upload self image :</label>
+                    <div id="my_camera" style="width:320px; height:240px;"></div>
+                    <div id="my_result"></div>
+
+                    <script language="JavaScript">
+                        Webcam.attach('#my_camera');
+
+                        function take_snapshot() {
+                            Webcam.snap(function (data_uri) {
+                                document.getElementById('my_result').innerHTML = '<img src="' + data_uri + '"/>';
+                            });
+                        }
+                    </script>
+
+                    <a href="javascript:void(take_snapshot())">Take Snapshot</a>
+
+                    <br>
+                    <label for="name">notice : this is to informing you regarding our rules and guidelines so pls read
+                        with
+                        care</label>
+                    <input type="checkbox" id="agree" name="agree"><br>
+
+                    <h3>
+                        <label for="name">register fee payment gateway :</label>
+                        <label for="name">telegram link and flash krega :</label>
+                    </h3><br>
+
+                    <input type="submit" value="register">
+                </form>
+            </div>
+        </div>
+        <div class="container" id="menu" style="background-color:black;">
+            <nav class="">
+                <div class="container">
+                    <ul class="navbar">
+                        <li class="nav-item">
+                            <a class="nav-link" href="home.html">home</a>
+                        </li><br>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">about</a>
+                        </li><br>
+                        <li class="nav-item">
+                            <a class="nav-link" href="register.html">register</a>
+                        </li><br>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">login</a>
+                        </li><br>
+                        <li class="nav-item">
+                            <a class="nav-link" href="memberList.html">member List</a>
+                        </li><br>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sahyoglist.html">sahyog list</a>
+                        </li><br>
+                        <li class="nav-item">
+                            <a class="nav-link" href="vyasthasulk.html">vyastha sulk</a>
+                        </li><br>
+                        <li class="nav-item">
+                            <a class="nav-link" href="niyamawali.html">niyamawali</a>
+                        </li><br>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">blog</a>
+                        </li><br>
+                        <li class="nav-item">
+                            <a class="nav-link" href="viewdonationlist.html">view donation list</a>
+                        </li><br>
+                        <li class="nav-item">
+                            <a class="nav-link" href="media.html">media</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="navbar.html">navbar</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+    </div>
+</body>
+
+</html>
